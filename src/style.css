@@ -1,5 +1,8 @@
 body {
-  background-color: #f4f9f4;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/868/original/nicolas-houdayer-dpZvv0KX1VY-unsplash.jpg?1707132325");
+  background-size: auto;
+  background-repeat: no-repeat;
+  /*background-color: #f4f9f4;*/
   font-family: "Manrope", sans-serif;
 }
 
