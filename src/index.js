@@ -15,10 +15,7 @@ function refreshWeather(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
-  iconElement.innerHTML = `<img
-                src="${response.data.condition.icon_url}"
-                class="weather-icon"
-              />`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
 
   getForecast(response.data.city);
 }
@@ -27,13 +24,13 @@ function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let days = [
-    `Sunday`,
-    `Monday`,
-    `Tuesday`,
-    `Wednesday`,
-    `Thursday`,
-    `Friday`,
-    `Saturday`,
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
   let day = days[date.getDay()];
 
@@ -71,16 +68,16 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
-
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
     if (index < 5) {
       forecastHtml =
         forecastHtml +
-        `<div class="weather-forecast-day">
+        `
+        <div class="weather-forecast-day">
           <div class="weather-forecast-date">${formatDay(day.time)}</div>
+          
           <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
           <div class="weather-forecast-temperatures">
           <div class="weather-forecast-temperature">
@@ -90,7 +87,8 @@ function displayForecast(response) {
             day.temperature.minimum
           )}º</div>
           </div>
-        </div>`;
+        </div>
+        `;
     }
   });
 
