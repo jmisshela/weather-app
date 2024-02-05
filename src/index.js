@@ -66,8 +66,10 @@ function displayForecast() {
           <div class="weather-forecast-date">${day}</div>
           <div class="weather-forecast-icon">❄️</div>
           <div class="weather-forecast-temperatures">
-            <span class="weather-forecast-temperature-max">15°</span>
-            <span class="weather-forecast-temperature-min">9°</span>
+          <div class="weather-forecast-temperature">
+            <strong>15º</strong>
+          </div>
+          <div class="weather-forecast-temperature">9º</div>
           </div>
         </div>`;
   });
